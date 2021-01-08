@@ -1,0 +1,48 @@
+{
+  "name": "gatsby-netlify-cms-typescript-template",
+  "description": "Gatsby TypeScript starter",
+  "version": "1.0.0",
+  "author": "Kilian Wimmer <kilocheat@gmail.com>",
+  "keywords": [
+    "gatsby, typescript"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "start": "yarn run develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "lint": "concurrently \"yarn lint:code\"",
+    "lint:code": "eslint 'src/**/*.{jsx,js,ts,tsx}'",
+    "format": "prettier --parser typescript --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.ts*\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@types/node": "^8.0.7",
+    "@types/react": "15.0.21",
+    "@types/react-dom": "0.14.23",
+    "concurrently": "^5.0.0",
+    "gatsby": "^1.9.119",
+    "gatsby-link": "^1.6.28",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-typescript": "^1.4.10"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-config-react-app": "^5.0.2",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^5.0.1",
+    "prettier": "^1.8.2"
+  }
+}

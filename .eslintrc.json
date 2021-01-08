@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "react-app",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier",
+    "simple-import-sort"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false,
+        "trailingComma": "all",
+        "singleQuote": true
+      }
+    ],
+    "simple-import-sort/sort": "error",
+    "curly": [
+      "error",
+      "multi-line"
+    ],
+    "camelcase": 2
+  },
+  "globals": {
+    "graphql": true,
+    "__PATH_PREFIX__": true
+  }
+}
