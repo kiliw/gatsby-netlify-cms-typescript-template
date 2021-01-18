@@ -121,6 +121,7 @@ jspm_packages/
 
 # idea
 .idea/
+*.iml
 
 .cache/
 # Build directory

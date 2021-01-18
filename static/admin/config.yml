@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  repo: "add your repo here"
+
+media_folder: "static/img"
+public_folder: "/img"
+publish_mode: "editorial_workflow"
+
+locales: &locales
+  options:
+    - "en"
+    - "de"
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'src/content/blog'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
