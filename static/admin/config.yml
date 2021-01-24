@@ -1,39 +1,27 @@
 backend:
   name: git-gateway
-  repo: "kiliw/gatsby-netlify-cms-typescript-template"
+  repo: kiliw/gatsby-netlify-cms-typescript-template
 
 media_folder: "static/img"
 public_folder: "/img"
 publish_mode: "editorial_workflow"
 
 collections:
-  - name: 'home'
-    label: 'Main page'
+  - name: "home"
+    label: "MainPage"
     delete: false
     files:
-      - file: 'src/content/home/home.json'
-        format: 'json'
-        identifier_field: 'id'
+      - file: "src/content/home/home.json"
+        name: "home"
+        label: "Home"
+        format: "json"
+        identifier_field: "id"
         fields:
-          - name: 'id'
-            widget: 'hidden'
-            default: 'home'
+          - name: "id"
+            widget: "hidden"
+            default: "home"
 
-          - name: 'title'
-            widget: 'string'
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'src/content/blog'
-    create: true
-    format: 'json'
-    slug: 'index'
-    media_folder: ''
-    public_folder: ''
-    path: '{{title}}/index'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+          - name: "title"
+            widget: "string"
+          - name: "introduction"
+            widget: "markdown"

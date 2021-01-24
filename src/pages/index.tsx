@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Link from 'gatsby-link'
 import * as React from 'react'
 
+import Header from '../components/Header'
 import Layout from '../layouts'
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
@@ -15,26 +16,27 @@ const Page = () => {
           title
         }
       }
-      homeJson {
-        title {
-          value
+      allHomeJson {
+        nodes {
+          introduction
+          title
         }
       }
     }
   `)
   return (
-    <Layout>
-      <div>
-        <h1>Hi people</h1>
-        <p>
-          Welcome to your new <strong>{data.site.siteMetadata.title}</strong>{' '}
-          site.
-        </p>
-        <p>Now go build something great.</p>
-        <p>Go an put in some content. {data.homeJson.title.value}</p>
-        <Link to="/page-2/">Go to page 2</Link>
-      </div>
-    </Layout>
+    <>
+      <Header siteTitle={data.allHomeJson.nodes[0].title.value} />
+      <Layout>
+        <div>
+          <h1>Hi people</h1>
+          <p>{data.allHomeJson.nodes[0].introduction.value}</p>
+
+          <p>Go an put in some content.</p>
+          <Link to="/page-2/">Go to page 2</Link>
+        </div>
+      </Layout>
+    </>
   )
 }
 
