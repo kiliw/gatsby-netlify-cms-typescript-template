@@ -8,13 +8,16 @@ module.exports = {
     description: `Get it going with the TS starter and netlify cms.`,
     author: `@kiliw`,
   },
-  siteMetadata: {
-    title: `Gatsby Typescript Starter`,
-  },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    // Add typescript stack into webpack
     `gatsby-plugin-typescript`,
     'gatsby-plugin-netlify-cms',
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/content/`,
+      },
+    },
   ],
 }

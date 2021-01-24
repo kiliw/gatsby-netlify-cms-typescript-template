@@ -1,4 +1,4 @@
-import { useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Link from 'gatsby-link'
 import * as React from 'react'
 
@@ -6,15 +6,6 @@ import Layout from '../layouts'
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
-interface IndexPageProps {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string
-      }
-    }
-  }
-}
 
 const Page = () => {
   const data = useStaticQuery(graphql`
@@ -22,6 +13,11 @@ const Page = () => {
       site {
         siteMetadata {
           title
+        }
+      }
+      homeJson {
+        title {
+          value
         }
       }
     }
@@ -35,6 +31,7 @@ const Page = () => {
           site.
         </p>
         <p>Now go build something great.</p>
+        <p>Go an put in some content. {data.homeJson.title.value}</p>
         <Link to="/page-2/">Go to page 2</Link>
       </div>
     </Layout>
