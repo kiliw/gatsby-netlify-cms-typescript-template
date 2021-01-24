@@ -1,8 +1,4 @@
 {
-  "title": {
-    "value": "Gatsby starter with typescript and netlify cms"
-  },
-  "introduction": {
-    "value": "This starter will set you up with a basic template with typescript and netflify cms. To get started go and configure your repository in the config.yml"
-  }
+  "title": "Gatsby starter with typescript and netlify cms",
+  "introduction": "This starter will set you up with a basic template with typescript and netflify cms. To get started go and configure your repository in the config.yml"
 }
