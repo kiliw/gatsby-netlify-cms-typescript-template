@@ -35,3 +35,24 @@ collections:
           - name: "introduction"
             widget: "markdown"
             i18n: true
+  - name: 'secondPage'
+    label: 'SecondPage'
+    i18n: true
+    delete: false
+    files:
+      - file: "src/content/page2/page2.json"
+        name: "secondPage"
+        label: "SecondPage"
+        format: "json"
+        identifier_field: "id"
+        fields:
+          - name: "id"
+            widget: "hidden"
+            default: "home"
+
+          - name: "title"
+            widget: "string"
+            i18n: true
+          - name: "introduction"
+            widget: "markdown"
+            i18n: true
