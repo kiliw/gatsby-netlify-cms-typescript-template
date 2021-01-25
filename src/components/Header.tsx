@@ -1,6 +1,8 @@
 import { Link } from 'gatsby'
 import React, { FunctionComponent } from 'react'
 
+import { LanguageSwitcher } from './Languageswitcher'
+
 type HeaderProps = {
   siteTitle: string
 }
@@ -29,6 +31,7 @@ const Header: FunctionComponent<HeaderProps> = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
+        <LanguageSwitcher />
       </h1>
     </div>
   </header>

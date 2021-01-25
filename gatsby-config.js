@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-typescript`,
     'gatsby-plugin-netlify-cms',
     `gatsby-transformer-json`,
+    'gatsby-plugin-i18n',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

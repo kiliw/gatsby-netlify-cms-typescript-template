@@ -2,13 +2,21 @@ backend:
   name: git-gateway
   repo: kiliw/gatsby-netlify-cms-typescript-template
 
+local_backend: true
+
 media_folder: "static/img"
 public_folder: "/img"
 publish_mode: "editorial_workflow"
 
+i18n:
+  structure: single_file
+  locales: [de, en]
+  default_locale: de
+
 collections:
   - name: "home"
     label: "MainPage"
+    i18n: true
     delete: false
     files:
       - file: "src/content/home/home.json"
@@ -23,5 +31,28 @@ collections:
 
           - name: "title"
             widget: "string"
+            i18n: true
           - name: "introduction"
             widget: "markdown"
+            i18n: true
+  - name: 'secondPage'
+    label: 'SecondPage'
+    i18n: true
+    delete: false
+    files:
+      - file: "src/content/page2/page2.json"
+        name: "secondPage"
+        label: "SecondPage"
+        format: "json"
+        identifier_field: "id"
+        fields:
+          - name: "id"
+            widget: "hidden"
+            default: "home"
+
+          - name: "title"
+            widget: "string"
+            i18n: true
+          - name: "introduction"
+            widget: "markdown"
+            i18n: true
